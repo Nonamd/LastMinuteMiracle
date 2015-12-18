@@ -1,0 +1,52 @@
+
+
+<div class="modal fade" id="posModal" ng-controller="TaskController">
+	<div class="modal-dialog">
+		<div class="modal-content">
+
+			<div class="panel panel-warning title">
+				<div class="panel-heading title">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+					<h3 class="panel-title">Ask the Universe for Your Last Minute Miracle</h3>
+				</div>
+
+
+				<md-content>
+        <div class="panel-body">
+          <form ng-submit="createTask()">              
+            <input type="text" ng-model="task.title" class="form-control" placeholder="Service Miracle Requested" required><br>             
+            <textarea ng-model="task.description" class="form-control" placeholder="Describe the service you need" required></textarea><br>
+            <input type="number" ng-model="task.total" class="form-control" placeholder="How much will you pay?" required><br>
+            <input type="text" ng-model="task.location" class="form-control" placeholder="Where are you located?" required><br>
+            
+            <!-- <div>
+	            <md-datepicker ng-model="task.start" md-placeholder="Enter start date"></md-datepicker><br>
+	            <md-datepicker ng-model="task.end" md-placeholder="Enter end date"></md-datepicker><br>
+
+        	</div> -->
+
+        	<div><!-- <div ng-controller="DatepickerDemoCtrl"> -->
+		    <pre>Date output: <em>{{dt}}</em></pre>
+
+		    <div class="row">
+		        <div class="col-md-6">
+		            <p class="input-group">
+		              <input type="date" class="form-control" ng-model="dt" ng-required="true" />
+		              <input type="hidden" datepicker-popup="yyyy-MM-dd" ng-model="dt" is-open="opened" ng-required="true" close-text="Close" />
+		              <span class="input-group-btn">
+		                <button type="button" class="btn btn-default" ng-click="open($event)"><i class="glyphicon glyphicon-calendar"></i></button>
+		              </span>
+		            </p>
+		        </div>
+		    </div>
+</div>
+
+
+            <input type="submit" value="Give me a Miracle!!" class="btn btn-warning">
+          </form>
+        </div>
+      </md-content>
+			</div>
+		</div>
+	</div>
+</div>
